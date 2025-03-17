@@ -14,7 +14,9 @@ export class Triangle implements Figure {
     public c: number,
   ) {
     if (a + b <= c || a + c <= b || b + c <= a) {
-      throw new Error('Invalid triangle sides');
+      throw new Error(
+        'The sum of any two sides must be greater than the third side'
+      );
     }
   }
 
@@ -34,7 +36,7 @@ export class Circle implements Figure {
     public radius: number,
   ) {
     if (!(radius > 0)) {
-      throw new Error('Invalid radius');
+      throw new Error('Radius must be greater than 0');
     }
   }
 
@@ -54,7 +56,7 @@ export class Rectangle implements Figure {
     public height: number,
   ) {
     if (width <= 0 || height <= 0) {
-      throw new Error('Invalid sides');
+      throw new Error('Sides must be greater than 0');
     }
   }
 
